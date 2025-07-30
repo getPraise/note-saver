@@ -30,7 +30,7 @@ const Paste = () => {
   }
 
   const handleShare = (pasteId) => {
-    const shareUrl = `${window.location.origin}/paste/${pasteId}`
+    const shareUrl = `${window.location.origin}/pastes/${pasteId}`
     navigator.clipboard.writeText(shareUrl)
     toast.success('Link copied to clipboard')
   }
@@ -70,8 +70,7 @@ const Paste = () => {
               <Button onClick={() => handleCopy(paste.content)} variant="secondary">
                 Copy
               </Button>
-              <Button onClick={() => handleShare(paste._id)}>Share</Button>
-            </div>
+              
             <div className="text-xs text-right text-gray-500">
               {new Date(paste.createdAt).toLocaleString()}
             </div>
