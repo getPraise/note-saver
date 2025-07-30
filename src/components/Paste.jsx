@@ -64,13 +64,16 @@ const Paste = () => {
               <Link to={`/paste/${paste._id}`}>
                 <Button variant="outline">View</Button>
               </Link>
-              <Button onClick={() => handleDelete(paste._id)} variant="destructive">
-                Delete
-              </Button>
+                <Button onClick={() => handleDelete(paste._id)} variant="destructive">
+                  Delete
+                 </Button>
               <Button onClick={() => handleCopy(paste.content)} variant="secondary">
-                Copy
+                 Copy
               </Button>
-              
+              <Button onClick={() => handleShare(paste._id)} variant="outline">
+                Share
+              </Button>
+            </div> 
             <div className="text-xs text-right text-gray-500">
               {new Date(paste.createdAt).toLocaleString()}
             </div>
